@@ -2,12 +2,14 @@
   "name": "scaleable-chat",
   "private": true,
   "scripts": {
+    "prestart": "kill-port 8000 || true",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "kill-port": "^2.0.1",
     "prettier": "^3.2.5",
     "turbo": "^2.3.3",
     "typescript": "5.5.4"
